@@ -3,4 +3,7 @@ Interesting papers in NeurIPS 2018 (CNNs, model understanding, manifold learning
 
 The papers can be found in ___papers___ directory. 
 
-{% bibliography --cited --file refs.bib %}
+---
+bibliography: mybib.bib
+nocite: '@*'
+...
