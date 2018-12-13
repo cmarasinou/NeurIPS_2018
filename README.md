@@ -6,7 +6,4 @@ https://papers.nips.cc/book/advances-in-neural-information-processing-systems-31
 
 The papers of interest in can be found in __refs.bib__ and complied in ___papers.html___
 
-<iframe src='./papers.html'></iframe>
-
-
 A summary of each paper will follow.
