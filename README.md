@@ -1,4 +1,4 @@
-# NeurIPS 2018 
+# NeurIPS_2018 
 Interesting papers in NeurIPS 2018 (CNNs, model understanding, manifold learning)
 
 All NeurIPS 2018 papers can be found at
