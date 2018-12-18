@@ -1,4 +1,5 @@
 ---
+layout: page
 title: NeurIPS 2018
 ---
 
