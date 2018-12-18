@@ -1,4 +1,4 @@
-# NeurIPS_2018 
+# NeurIPS_2018
 Interesting papers in NeurIPS 2018 (CNNs, model understanding, manifold learning)
 
 All NeurIPS 2018 papers can be found at
@@ -6,7 +6,7 @@ https://papers.nips.cc/book/advances-in-neural-information-processing-systems-31
 
 The papers of interest can be found in __refs.bib__ and compiled in [papers.html](./papers.html)
 
-A summary of each paper will follow.
+A summary of each paper will follow. The first one is already posted here: [summaries.html](./summaries.html)
 
 ## Changing the papers list
 
