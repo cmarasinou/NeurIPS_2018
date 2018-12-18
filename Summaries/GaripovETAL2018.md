@@ -1,3 +1,1 @@
-## Summary
-
 Authors study the geometry of loss surfaces in the parameter space of DNNs. They find that loss surface optima are connected by simple curves of near-constant accuracy. They propose a method for producing such curves, based on minimizing the line integral of the loss function along the curve (or as it referred, the expected loss along the curve). Their experiments show that such curves are not unique for a given pair of loss optima. Also, they show that each point on a curve corresponds to meaningful representations and not just degeneracy. They propose Fast Geometric Ensembling (FGE), based on a periodically changing learning rate, in order to produce points of near accuracy.
