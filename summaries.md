@@ -1,8 +1,3 @@
----
-title:  "Summaries of Papers"
-math: true
----
-
 # Summaries of Papers
 
 ---
