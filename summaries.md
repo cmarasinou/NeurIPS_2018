@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Summaries of Papers"
 math: true
 ---
