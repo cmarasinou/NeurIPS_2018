@@ -1,4 +1,10 @@
-# SUMMARIES OF PAPERS
+---
+layout: post
+title:  "Summaries of Papers"
+math: true
+---
+
+# Summaries of Papers
 
 ---
 #### Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs
