@@ -1,4 +1,3 @@
-# Summaries of Papers
 
 ---
 #### Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs
