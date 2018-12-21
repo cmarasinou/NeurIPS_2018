@@ -34,7 +34,8 @@ $$
   1. First perform N1 steps with Linear (Softmax)
   2. Next, perform N2 steps with WNLL
 
-![Training](/assets/images/bao_1.png)
+![Training](./assets/images/bao_1.png)
+
 Notice that the interpolation is done on the deep features of the DNN (and not just the input)
 
 - Testing: Using only the WNLL branch
