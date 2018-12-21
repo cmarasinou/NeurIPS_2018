@@ -16,3 +16,9 @@ _Summary:_ {% include_relative Summaries/YehETAL2018.md %}
 _Authors:_ Wang, Liwei and Hu, Lunjia and Gu, Jiayuan and Wu, Yue and Hu, Zhiqiang and He, Kun and Hopcroft, John
 
 _Summary:_ {% include_relative Summaries/WangETAL2018.md %}
+
+---
+#### Deep Neural Nets with Interpolating Function  as Output Activation
+_Authors:_ Wang, Bao and Luo, Xiyang and Li, Zhen and Zhu, Wei and Shi, Zuoqiang and Osher, Stanley J.
+
+_Summary:_ {% include_relative Summaries/BaoETAL2018.md %}
