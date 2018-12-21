@@ -25,9 +25,9 @@ with the boundary conditions applying to the rest of the points in X.
 - Issue: Backpropagation of WNLL Loss is difficult due to it's complexity. An approximation is adopted
 
 $$
-\frac{\partial\mathcal{L}^{WNLL}}{\patial y} \fraction{\partial y}{partial x}
+\frac{\partial\mathcal{L}^{WNLL}}{\partial y} \frac{\partial y}{partial x}
 \approx
-\frac{\partial\mathcal{L}^{Linear}}{\patial y} \fraction{\partial y}{partial x}
+\frac{\partial\mathcal{L}^{Linear}}{\partial y} \frac{\partial y}{partial x}
 $$
 
 - Training:
