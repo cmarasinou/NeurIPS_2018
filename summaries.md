@@ -22,3 +22,9 @@ _Summary:_ {% include_relative Summaries/WangETAL2018.md %}
 _Authors:_ Wang, Bao and Luo, Xiyang and Li, Zhen and Zhu, Wei and Shi, Zuoqiang and Osher, Stanley J.
 
 _Summary:_ {% include_relative Summaries/BaoETAL2018.md %}
+
+---
+#### Towards Robust Interpretability with Self-Explaining Neural Networks
+_Authors:_ Alvarez-Melis, David and Jaakkola, Tommi S.
+
+_Summary:_ {% include_relative Summaries/AlvarezETAL2018.md %}

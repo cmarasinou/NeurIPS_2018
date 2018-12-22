@@ -1,42 +1,49 @@
-Authors develop self-explaining models as a generalization of linear models. Models are locally linear allowing for interpretability and globally non-linear allowing for good performance. Locality is imposed by a Lipschitz-like condition, which is implemented in the algorithm as a loss regularization term. The explanation for a certain input is given as a set $$\{ (h_i(x), \theta_i(x))\}_i^k$$ with $$h_i(x)$$ a basis of concepts (interpretable features) and $$\theta_i(x)$$ their influence scores.
+Authors introduce a new activation function to replace the softmax layer in DNNs. The new function is using part of the data as a template and interpolates for the training data. The reasoning for such an approach comes from the fact that softmax produces essentially a linear model of the deep features (last hidden layer output), without taking into consideration the manifold structure of these deep features. The interpolation is done by harmonic extension, setting up an energy functional and minimizing it.
 
 <center>METHODS</center>
 
-- Generalizing linear Models
-  1. Linear model $$f(x) = \theta^T x$$  
-  2. Generalizing coefficients $$f(x) = \theta(x)^T x$$  
-    $$\theta(x)$$ smooth, to maintain interpretability
-  3. Generalizing features $$f(x) = \theta(x)^T h(x)$$
-  $$h(x)$$ interpretable basis concepts, generally not same size as $$x$$
-  4. Generalizing aggregation $$f(x) = g_1(\theta(x), \h_1(x), \cdots, \theta_k(x), \h_k(x))$$
-  g doesn't have to be the sum of it's arguments
+- We are interested in the interpolation of a function $$u(x)$$ (with $$x\in X$$ representing the input of a DNN and u the output), given it's values for some points $$x\in X^{te}$$ (template)
 
-- Defining Locality
-  $$\theta$$ __locally difference bounded__ by h if
-  $$||\theta(x)-\theta(x_0)|| \leq L ||h(x)-h(x_0)||$$
-  where $$x$$ in the neighborhood of $$x_0$$
+Using harmonic extension we can perform the interpolation by minimizing the functional
 
-- Self-explaining model definitions
+$$
+\mathcal{E}[u] = \frac{1}{2} \sum\limits_{x_1,x_2 \in X} w(x_1,x_2) (u(x_1) -u(x_2))^2
+$$
 
-  Structure: $$f(x) = g_1(\theta(x), \h_1(x), \cdots, \theta_k(x), \h_k(x))$$
+with boundary conditions $$u(x)=g(x)$$ for $$x\in X^{te}$$, where $$w(x,y)$$ is a weight function (typically a Gaussian)  $$g(x)$$ is known (ground truth labels)
 
-  With conditions:
-  1. g: monotone & additively separable
-  2. $$\nabla g \geq 0$$
-  3. $$\theta$$ __locally difference bounded__ by $$h$$
-  4. $$h_i(x)$$ interpretable
-  5. k: small
+Minimizing the functional we get the Euler-Lagrange (EL) equations
 
-- Enforcing Locality of $$\theta(x)$$ in the basis $$h(x)$$
-  - Want $$\nabla_z f \approx f(z_0)$$, where $$z:=h(x)$$
-  - Notice: $$\nabla_x f = \nabla_z f \partial h /\partial x$$, calculable
-  - We introduce the regularization term ~$$||\nabla_x f - \theta(x)^T \partial h / \partial x||$$
+$$
+\sum\limits_{x_2\in X} (w(x_1,x_2) +w(x_2,x_1)) (u(x_1)-u(x_2)) = 0, \quad x_1\in X/X^{te}
+$$
 
-- Enforcing interpretability of $$h(x)$$
-  - Preserve relevant information, e.g. autoencoder (with introducing an extra loss regularization term)
-  - Non-overlapping concepts, e.g. enforcing sparsity
-  - Human-understanding, e.g. show training examples that maximize concept
+with the boundary conditions applying to the rest of the points in X.
 
-- Overall model
+- In the algorithm $$u(x)$$ is named $$WNLL(X, X^{te}, Y^{te})$$. Note that it depends on the template dataset because of the interpolation process.
 
-!(Model)[./assets/alvarez_1.png]
+- Issue: Backpropagation of WNLL Loss is difficult due to it's complexity. An approximation is adopted
+
+$$
+\frac{\partial\mathcal{L}^{WNLL}}{\partial y} \frac{\partial y}{\partial x}
+\approx
+\frac{\partial\mathcal{L}^{Linear}}{\partial y} \frac{\partial y}{\partial x}
+$$
+
+- Training:
+  1. First perform N1 steps with Linear (Softmax)
+  2. Next, perform N2 steps with WNLL
+
+![Training](./assets/images/bao_1.png)
+
+Notice that the interpolation is done on the deep features of the DNN (and not just the input)
+
+- Testing: Using only the WNLL branch
+
+- Benefits:
+  - Model learns features both from linear classifiaction and manifold Learning
+  - Method provides a perturbation to avoid getting stuck in bad local minima
+
+- Limitations:
+  - Batch size should be quasilinear with number of classes, otherwise the interpolation is invalid
+  - Backpropagation was approximated
