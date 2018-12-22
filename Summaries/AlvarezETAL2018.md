@@ -30,7 +30,7 @@ Authors develop self-explaining models as a generalization of linear models. Mod
 - Enforcing Locality of $$\theta(x)$$ in the basis $$h(x)$$
   - Want $$\nabla_z f \approx f(z_0)$$, where $$z:=h(x)$$
   - Notice: $$\nabla_x f = \nabla_z f \; \partial h /\partial x$$, calculable
-  - We introduce the regularization term $$~||\nabla_x f - \theta(x)^T \partial h / \partial x||$$
+  - We introduce the regularization term $$~\|\|\nabla_x f - \theta(x)^T \partial h / \partial x\|\|$$
 
 - Enforcing interpretability of $$h(x)$$
   - Preserve relevant information, e.g. autoencoder (with introducing an extra loss regularization term)
@@ -39,4 +39,4 @@ Authors develop self-explaining models as a generalization of linear models. Mod
 
 - Overall model
 
-![Model](./assets/alvarez_1.png)
+![Model](./assets/images/alvarez_1.png)
