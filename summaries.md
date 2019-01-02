@@ -28,3 +28,9 @@ _Summary:_ {% include_relative Summaries/BaoETAL2018.md %}
 _Authors:_ Alvarez-Melis, David and Jaakkola, Tommi S.
 
 _Summary:_ {% include_relative Summaries/AlvarezETAL2018.md %}
+
+---
+#### Geometry Based Data Generation
+_Authors:_ Lindenbaum, Ofir and Stanley, Jay S and Wolf, Guy and Krishnaswamy, Smita
+
+_Summary:_ {% include_relative Summaries/LindenbaumETAL2018.md %}
