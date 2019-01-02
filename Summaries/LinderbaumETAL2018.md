@@ -2,7 +2,7 @@ Authors develop a generative model for data synthesis, based on data manifold st
 
 <center>METHODS</center>
 
-_Markov Matrix__ $$P$$: Defines a diffusion process which can capture the diffusion geometry of a manifold
+__Markov Matrix__ $$P$$: Defines a diffusion process which can capture the diffusion geometry of a manifold
 $$
 P_{i,j} = \mathcal{P}(x_i, x_j) = [D^{-1}K]_{ij}
 $$
