@@ -34,3 +34,9 @@ _Summary:_ {% include_relative Summaries/AlvarezETAL2018.md %}
 _Authors:_ Lindenbaum, Ofir and Stanley, Jay S and Wolf, Guy and Krishnaswamy, Smita
 
 _Summary:_ {% include_relative Summaries/LinderbaumETAL2018.md %}
+
+---
+#### The Spectrum of the Fisher Information Matrix of a Single-Hidden-Layer Neural Network
+_Authors:_ Pennington, Jeffrey and Worah, Pratik
+
+_Summary:_ {% include_relative Summaries/PenningtonWorah2018.md %}
