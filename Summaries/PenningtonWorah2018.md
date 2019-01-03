@@ -17,6 +17,7 @@ with $$\theta_i$$ network parameters, $$\hat Y$$ network predictions, $$\alpha$$
   - $$G(z)$$ branch points and poles found
   - These encode information about $$\rho(\lambda)$$
   - $$\rho(\lambda)$$ is found numerically for different activation functions
+  
 ![spectral_densities](./assets/images/pennington_1.png)
 
 - Paper initiates work of studying deep learning using __random matrix theory__
