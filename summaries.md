@@ -40,3 +40,9 @@ _Summary:_ {% include_relative Summaries/LinderbaumETAL2018.md %}
 _Authors:_ Pennington, Jeffrey and Worah, Pratik
 
 _Summary:_ {% include_relative Summaries/PenningtonWorah2018.md %}
+
+---
+#### Can We Gain More from Orthogonality Regularizations in Training Deep CNNs?
+_Authors:_ Bansal, Nitin and Chen, Xiaohan and Wang, Zhangyang
+
+_Summary:_ {% include_relative Summaries/BansalChenETAL2018.md %}
